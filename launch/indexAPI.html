@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <style>
+        body {
+            overflow: hidden;
+            margin: 0;
+        }
+
+        .responsive-container {
+            position: relative;
+            height: 100%;
+            height: calc(100vh - 4px);
+            padding-bottom: 56.25%;
+        }
+
+        .responsive-container iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            height: 100vh;
+        }
+    </style>
+    <script src="scripts/tincan.min.js" type="text/javascript" async></script>
+    <script src="scripts/ct-driver.js" async></script>
+    <script type="text/javascript" src="../course/js/xapi-common.js"></script>
+    <script>
+        strContentLocation = "../course/index.html"; // Link to the start of course, typically index.htm
+
+        function LoadContent() {
+            window.course_content.document.location.href = strContentLocation;
+            /*var bookmark = TCAPI_GetBookmark();
+
+            if (bookmark != "") {
+                window.course_content.document.location.href = "../course/" + bookmark;
+            } else {
+                window.course_content.document.location.href = strContentLocation;
+            } */
+        }
+
+        /*function markCourseComplete() {
+            // checks if our sessionStoage variables both equat to completed
+            var courseComplete = ["lessonOne", "lessonTwo"].every(
+                lesson => sessionStorage.getItem(lesson) == "completed"
+            );
+
+            // If it equals true, then mark LMS complete
+            if (courseComplete == true) {
+                SetSCOComplete();
+            } else {
+                return;
+            }
+        }
+        window.addEventListener("beforeunload", function(event) {
+            // Cancel the event
+            e.preventDefault();
+            // Chrome requires returnValue to be set
+            e.returnValue = '';
+        });
+        window.onbeforeunload = function(event) {
+            markCourseComplete();
+        };
+
+        window.addEventListener("unload", function(event) {
+            // Cancel the event
+            e.preventDefault();
+            // Chrome requires returnValue to be set
+            e.returnValue = '';
+        });
+        window.onunload = function(event) {
+            markCourseComplete();
+        }; */
+    </script>
+</head>
+
+<body onload="Start()" onbeforeunload="Unload();" onunload="Unload();">
+    <div class="responsive-container">
+        <iframe noresize name="course_content" src="blank.html" frameborder="0" allowfullscreen></iframe>
+    </div>
+</body>
+</html>

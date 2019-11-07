@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Equity Institute - Classroom Experience</title>
+    <meta name="description" content="Equity Institute Classroom Experience will help expand your awareness of implicit bias and work toward creating equity in your classroom.">
+    <link rel="apple-touch-icon" sizes="57x57" href="./apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png">
+    <link rel="manifest" href="./manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="./ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+
+    <script type="text/javascript" src="js/scripts.js"></script>
+    <script type="text/javascript" src="js/xapi-common.js"></script>
+
+    <script src="js/aframe.min.js"></script>
+    <script src="js/TweenMax.min.js"></script>
+    <script src="js/howler.min.js"></script>
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <script src="js/GameModel.js"></script>
+    <script src="js/GameController.js"></script>
+    <script src="js/a-components.js"></script>
+    <script src="js/look-touch-controls.js"></script>
+
+    <!--<script src="js/modaal.min.js"></script>-->
+
+    <script>
+
+      
+    
+    </script>
+
+
+  </head>
+  <body>
+
+    <a-scene
+      eduleaders
+      audio-controller
+      id="ent-scene"
+      renderer="sortObjects: true;"
+      loading-screen="dotsColor: #e73133; backgroundColor: #5a3580">
+
+      <a-assets>
+
+        <img id="img-dirty-plate" src="assets/EL-plate-dirty-glowed.jpg" crossorigin="anonymous">
+        <img id="img-clean-plate" src="assets/EL-plate-clean.jpg" crossorigin="anonymous">
+
+        <img id="img-logo-full" src="assets/EquityInstitute-fulllogo-small.png">
+        <img id="img-side-accent" src="assets/EquityInstitute-background-gradient.jpg">
+        <img id="img-logo-icon" src="assets/EL-logo-icon.png">
+        <img id="img-found-marker" src="assets/EL-found-marker.png">
+
+        <img id="img-found-background" src="assets/EduLeaders_foundimage_placer.jpg">
+
+        <img id="img-checkmark" src="assets/Checkmark.png">
+        <img id="img-checkmark-purple" src="assets/Checkmark-purple.png">
+        <img id="img-whiteboard" src="assets/Whiteboard.png">
+        <img id="img-whiteboard-title" src="assets/whiteboard-title.png">
+
+        <img id="img-button-bg" src="assets/button-bg-white.png">
+
+        <img id="img-desks-dirty" src="assets/01-Desks-dirty.jpg" crossorigin="anonymous">
+        <img id="img-desks-clean" src="assets/01-Desks-clean.jpg" crossorigin="anonymous">
+
+        <img id="img-library-dirty" src="assets/02-Library-dirty.jpg" crossorigin="anonymous">
+        <img id="img-library-clean" src="assets/02-Library-clean.jpg" crossorigin="anonymous">
+
+        <img id="img-rules-dirty" src="assets/03-Rules-dirty.jpg" crossorigin="anonymous">
+        <img id="img-rules-clean" src="assets/03-Rules-clean.jpg" crossorigin="anonymous">
+
+        <img id="img-bulletin-dirty" src="assets/04-BulletinBoard-dirty.jpg" crossorigin="anonymous">
+        <img id="img-bulletin-clean" src="assets/04-BulletinBoard-clean.jpg" crossorigin="anonymous">
+
+        <img id="img-teacher-desk-dirty" src="assets/05-TeacherDesk-dirty.jpg" crossorigin="anonymous">
+        <img id="img-teacher-desk-clean" src="assets/05-TeacherDesk-clean.jpg" crossorigin="anonymous">
+<!--
+        <img id="img-desks-dirty" src="assets/01-Desks-dirty-small.jpg" crossorigin="anonymous">
+        <img id="img-desks-clean" src="assets/01-Desks-clean-small.jpg" crossorigin="anonymous">
+
+        <img id="img-library-dirty" src="assets/02-Library-dirty-small.jpg" crossorigin="anonymous">
+        <img id="img-library-clean" src="assets/02-Library-clean-small.jpg" crossorigin="anonymous">
+
+        <img id="img-rules-dirty" src="assets/03-Rules-dirty-small.jpg" crossorigin="anonymous">
+        <img id="img-rules-clean" src="assets/03-Rules-clean-small.jpg" crossorigin="anonymous">
+
+        <img id="img-bulletin-dirty" src="assets/04-BulletinBoard-dirty-small.jpg" crossorigin="anonymous">
+        <img id="img-bulletin-clean" src="assets/04-BulletinBoard-clean-small.jpg" crossorigin="anonymous">
+
+        <img id="img-teacher-desk-dirty" src="assets/05-TeacherDesk-dirty-small.jpg" crossorigin="anonymous">
+        <img id="img-teacher-desk-clean" src="assets/05-TeacherDesk-clean-small.jpg" crossorigin="anonymous">
+-->
+
+      </a-assets>
+
+      <a-camera look-touch-controls>
+      <!--<a-camera look-touch-controls="" camera="" position="" rotation="" look-controls="" wasd-controls="">-->
+      <!--<a-entity camera look-touch-controls>-->
+        <a-image
+                cursor-component
+                color-shift
+                animation__click="property: scale; startEvents: click; easing: easeInCubic; dur: 150; from: .2 .2 .2; to: .4 .4 .4"
+                animation__fusing="property: scale; startEvents: fusing; easing: easeInCubic; dur: 1000; from: .4 .4 .4; to: .2 .2 .2"
+                animation__mouseleave="property: scale; startEvents: mouseleave; easing: easeInCubic; dur: 300; to: .4 .4 .4"
+                scale=".4 .4 .4"
+                cursor="fuse: true; fuseTimeout: 1000"
+                position="0 0 -3"
+                geometry="primitive: ring; radiusInner: 0.1; radiusOuter: 0.2"
+                material="opacity: 0.8; shader: flat"
+                raycaster="objects: .clickable;"></a-image>
+      </a-camera>
+
+      <!-- BACKGROUND IMG -->
+      <a-sky id="sky-bg" radius="500" src="#img-dirty-plate" rotation="-1.5 -90 0"></a-sky>
+
+      <!-- WHITEBOARD HOLDER-->
+      <a-entity id="el-whiteboard" position="0 -3 -20" scale="3 3 3" whiteboard>
+        <a-image class="logo" src="#img-logo-full" width="3.2" height="0.8" position="6.5 4.5 0"></a-image>
+
+        <a-image class="header" src="#img-whiteboard-title" width="8" height="0.5" position="0 4.5 0"></a-image>
+
+        <a-image class="check-1" src="#img-checkmark" position="-2.1 3.51 0.004" scale="0.5 0.5 0.5" visible="false"></a-image>
+        <a-image class="check-2" src="#img-checkmark" position="-2.1 3.05 0.004" scale="0.5 0.5 0.5" visible="false"></a-image>
+        <a-image class="check-3" src="#img-checkmark" position="-2.1 2.57 0.004" scale="0.5 0.5 0.5" visible="false"></a-image>
+        <a-image class="check-4" src="#img-checkmark" position="-2.1 2.1 0.004" scale="0.5 0.5 0.5" visible="false"></a-image>
+        <a-image class="check-5" src="#img-checkmark" position="-2.1 1.6 0.004" scale="0.5 0.5 0.5" visible="false"></a-image>
+
+        <a-image class="tasks" src="#img-whiteboard" width="6" height="3" position=".5 2.5 0"></a-image>
+      </a-entity>
+
+      <!-- FINDABLES -->
+      <a-entity id="findables-container" visible="true">
+
+        <a-image class="rules marker" findable="id: rules" src="#img-checkmark-purple" width="1.35" height="1.35" position="-8.7 3.5 -6.751" scale="2 2 2"></a-image>
+        <a-image class="library marker" findable="id: library" src="#img-checkmark-purple" width="1.35" height="1.35" position="10 -0.5 -5" scale="2 2 2"></a-image>
+        <a-image class="bulletin marker" findable="id: bulletin" src="#img-checkmark-purple" width="1.35" height="1.35" position="-3 2 13" scale="2 2 2"></a-image>
+        <a-image class="teacherDesk marker" findable="id: teacherDesk" src="#img-checkmark-purple" width="1.35" height="1.35" position="6.2 1 8" scale="2 2 2"></a-image>
+        <a-image class="desks marker" findable="id: desks" src="#img-checkmark-purple" width="1.35" height="1.35" position="0 -2 10" scale="3.5 3.5 3.5"></a-image>
+
+      </a-entity>
+
+      <!-- MODALS -->
+      <a-entity id="intro-modal-ent" intro-modal position="0 1 -5">
+        <a-entity class="accent-holder" position="-5 0 0">
+          <a-image class="purple-accent" src="#img-side-accent" width="10" height="6" position="5 0.65 0.004"></a-image>
+        </a-entity>
+
+        <a-text class="header" position="0.72841 2.55476 0.002" height="2" opacity="0" text="font:aileronsemibold; width: 8; height: 6; color: #5a3580; wrapCount: 30; align: center" value="Welcome to the Equity Institute\nClassroom Experience"></a-text>
+        <a-text class="body" position="-2.43624 0.6 0.001" height="4" opacity="0" text="width: 6.55; color: #403e82; wrapCount: 50" value="Imagine that you are a student whose racial, ethnic or gender identity is different than your own.  In this activity, you will search for 5 evidence examples, from the students perspective, of implicit bias and inequity. Once you have identified the example by focusing your eyes on it, you must listen to the description to check it off the list before finding the next example. We hope that this experience will help expand your awareness of implicit bias and work toward creating equity in your classroom."></a-text>
+
+        <a-image class="logo" src="#img-logo-full" position="-2.71 -1.3 0.007" width="4" height="1" opacity="0"></a-image>
+
+        <a-entity class="ok-button" ok-button="id:close-intro" position="0.8 -1.5 0.002" >
+          <a-text class="button-caption" position="0 0.05 0" opacity="0" height="2" text="font:aileronsemibold; width: 6; height: 6; color: #FFFFFF; wrapCount: 30; align: center" value="OK"></a-text>
+          <a-image class="button-image" src="#img-button-bg" opacity="0" width="2" height="0.5" position="0 0 -0.001"></a-image>
+        </a-entity>
+
+        <a-image class="white-blocker" color="white" width="10" height="6" position="0 0.65 -0.002"></a-image>
+      </a-entity>
+
+      <a-entity id="found-modal-ent" found-modal position="0 -1000 -10" visible="true">
+<!--
+        <a-entity class="accent-holder" position="5 0 0">
+          <a-image class="purple-accent" src="#img-side-accent" width="10" height="5" position="-5 00 0.008"></a-image>
+        </a-entity>
+
+        <a-text class="header" position="0.3 2 0.002" height="2" opacity="0" text="font:aileronsemibold; width: 6; height: 6; color: #5a3580; wrapCount: 30; align: left" value="Welcome to the Equity Institute\nClassroom Experience"></a-text>
+        <a-text class="body" position="0.3 0.6 0.001" height="4" opacity="0" text="width: 3.5; color: #403e82; wrapCount: 30" value="This poster was bought at a store with no student input. Create a list of values with your students to help define the classroom community as a socially and emotionally safe space. Create a list of agreements about how class members will treat each other. Identity, difference and power should always be addressed explicitly."></a-text>
+
+        <a-image class="image-old" src="#img-rules-dirty" width="5" height="5" position="-2.5 0 0.003"></a-image>
+        <a-image class="image-new" src="#img-rules-clean" width="5" height="5" position="-2.5 0 0.006"></a-image>
+
+        <a-image class="white-blocker" color="white" width="10" height="5" position="0 0 -0.002"></a-image>
+-->
+
+        <a-image class="image-old" src="#img-rules-dirty" width="8" height="6" position="0 0 0.003" opacity="0"></a-image>
+        <a-image class="image-new" src="#img-rules-clean" width="8" height="6" position="0 0 0.006" opacity="0"></a-image>
+
+        <a-entity class="next-button" ok-button="id:next-found" position="0 -3 0.01" visible="false">
+          <a-text class="button-caption" position="0 0.05 0" opacity="0" height="2" text="font:aileronsemibold; width: 6; height: 6; color: #FFFFFF; wrapCount: 30; align: center" value="NEXT"></a-text>
+          <a-image class="button-image" src="#img-button-bg" opacity="0" width="2" height="0.5" position="0 0 -0.001"></a-image>
+        </a-entity>
+        <a-entity class="close-button" ok-button="id:close-found" position="2.1 -3 0.01" visible="false">
+          <a-text class="button-caption" position="0 0.05 0" opacity="0" height="2" text="font:aileronsemibold; width: 6; height: 6; color: #FFFFFF; wrapCount: 30; align: center" value="CLOSE"></a-text>
+          <a-image class="button-image" src="#img-button-bg" opacity="0" width="2" height="0.5" position="0 0 -0.001"></a-image>
+        </a-entity>
+        <a-entity class="back-button" ok-button="id:back-found" position="-2.1 -3 0.01" visible="false">
+          <a-text class="button-caption" position="0 0.05 0" opacity="0" height="2" text="font:aileronsemibold; width: 6; height: 6; color: #FFFFFF; wrapCount: 30; align: center" value="BACK"></a-text>
+          <a-image class="button-image" src="#img-button-bg" opacity="0" width="2" height="0.5" position="0 0 -0.001"></a-image>
+        </a-entity>
+      </a-entity>
+
+      <a-entity id="win-modal-ent" win-modal position="0 1000 -5" visible="false">
+        <a-entity class="accent-holder" position="-5 0 0">
+          <a-image class="purple-accent" src="#img-side-accent" width="10" height="6" position="5 0.65 0.004"></a-image>
+        </a-entity>
+
+        <a-text class="header" position="0.72841 2.55476 0.002" height="2" opacity="0" text="font:aileronsemibold; width: 8; height: 6; color: #5a3580; wrapCount: 30; align: center" value="Congratulations on completing the\nEquity Institute Classroom Experience"></a-text>
+        <a-text class="body" position="0 0.6 0.23683" height="4" opacity="0" text="width: 4.55; color: #403e82; wrapCount: 50; align: center" value="We hope you will use the lessons learned in the simulations to create more culturally responsive classrooms.\n
+          Equity Institute would like to thank the following people:\n
+          Dr. Javier Montanez\n
+          Emily Abedon\n
+          Karla Vigil \n
+          Jason Morris\n
+          CrossTrainer Learning"></a-text>
+        <a-image class="logo" src="#img-logo-full" position="-2.71 -1.3 0.007" width="4" height="1" opacity="0"></a-image>
+
+        <a-entity class="ok-button" ok-button="id:close-win" position="0.8 -1.5 0.002" >
+          <a-text class="button-caption" position="0 0.05 0" opacity="0" height="2" text="font:aileronsemibold; width: 6; height: 6; color: #FFFFFF; wrapCount: 30; align: center" value="OK"></a-text>
+          <a-image class="button-image" src="#img-button-bg" opacity="0" width="2" height="0.5" position="0 0 -0.001"></a-image>
+        </a-entity>
+
+        <a-image class="white-blocker" color="white" width="10" height="6" position="0 0.65 -0.002"></a-image>
+      </a-entity>
+
+      <a-sphere id="modal-blocker-sphere" modal-blocker color="black" radius="10">
+      </a-sphere>
+
+
+    </a-scene>
+
+
+
+    
+    <script>
+
+
+
+        
+
+
+
+        //xAPId.SetSCOComplete();
+
+        // Hard coding a score - testing
+        var intScore = 64;
+        var intMaxScore = 100;
+        var intMinScore = 0;
+
+        xAPId.TCAPI_SetScore(intScore, intMaxScore, intMinScore);
+
+        var myScore = xAPId.TCAPI_GetScore();
+
+        if (myScore <= 65) {
+            xAPId.TCAPI_SetFailed();
+        } else {
+            xAPId.TCAPI_SetPassed();
+        }
+
+
+        //Set a bookmark for this page.
+        //TCAPI_SetBookmark();
+
+        // checks if our progressbar is 100%
+        /*function markPageComplete() {
+            if (document.getElementById('elementalProgress').style.width == '100%' && sessionStorage.getItem('lessonOne') == null) {
+                  sessionStorage.setItem('lessonOne', 'completed');  
+            } else {
+                sessionStorage.getItem('lessonOne');
+            }
+        } */
+    </script>
+  </body>
+</html>

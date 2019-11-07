@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?><tincan xmlns="http://projecttincan.com/tincan.xsd">
+    <activities>
+        <activity id="https://crosstrainerlearning.com/intro" type="http://adlnet.gov/expapi/activities/course">
+            <name>Introduction</name>
+            <description lang="en-US">Introduction to Intro</description>
+            <launch lang="en-us">launch/indexAPI.html</launch>
+        </activity>
+    </activities>
+</tincan>
